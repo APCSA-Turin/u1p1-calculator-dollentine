@@ -21,7 +21,7 @@ public class TipCalculatorTest {
                                 "Tip per person: $2.18\n" +
                                 "Total cost per person: $10.89\n" +
                                 "-------------------------------\n";
-        String studentOutput = calculator.calculateTip(people,percent, cost);
+        String studentOutput = calculator.calculateTip(people,percent, cost); 
         assertEquals(expectedOutput,studentOutput);
     }
     @Test
@@ -77,7 +77,7 @@ public class TipCalculatorTest {
                                 "Tip per person: $3.0\n"+
                                 "Total cost per person: $18.0\n"+
                                 "-------------------------------\n";
-        String studentOutput = calculator.calculateTip(people,percent, cost);
+        String studentOutput = calculator.calculateTip(people,percent, cost); 
         assertEquals(expectedOutput,studentOutput);
     }
 
