@@ -5,22 +5,29 @@ public class TipCalculator {
     //WRITE YOUR PROGRAM IN calculateTip
          public static String calculateTip(int people, int percent, double cost) { //You must use these  variable in your calculations
          
-         double tip = Math.round (cost * ((percent / 100.0)) * 100) / 100.0; 
-         double billWithTip = Math.round ((tip + cost) * 100) / 100.0; 
-         double perPersonBeforeTip = Math.round ((cost / people) * 100) / 100.0; 
-         double tipPerPerson = Math.round ((tip / people) * 100) / 100.0; 
-         double totalCostPerPerson = Math.round ((billWithTip / people) * 100)/ 100.0; 
+         double tip = cost * ( percent / 100.0); 
+         double billWithTip = tip + cost; 
+         double perPersonBeforeTip =  cost / people; 
+         double tipPerPerson =  tip / people; 
+         double totalCostPerPerson =  billWithTip / people; 
+
+         double roundedTip = (int) (tip * 100 + 0.5) / 100.0; 
+         double roundedBillWithTip = (int) (billWithTip * 100 + 0.5) / 100.0; 
+         double roundedBeforeTip = (int) (perPersonBeforeTip * 100 + 0.5) / 100.0; 
+         double roundedTipPerPerson = (int) (tipPerPerson * 100 + 0.5) / 100.0; 
+         double roundedTotalPerPerson = (int) (totalCostPerPerson * 100 + 0.5) / 100.0; 
+
 
         //DO NOT DELETE ANY OF THE CODE BELOW      
 
         String result = "-------------------------------\n" +
                        "Total bill before tip: $" + cost + "" + "\n" +
                        "Total percentage: "  + percent + "" + "%\n" +
-                       "Total tip: $" + tip + "" + "\n" +
-                       "Total Bill with tip: $" + billWithTip + "" + "\n" +
-                       "Per person cost before tip: $" + perPersonBeforeTip + "" + "\n" +
-                       "Tip per person: $" + tipPerPerson + "" + "\n" +
-                       "Total cost per person: $" + totalCostPerPerson + "" + "\n" +
+                       "Total tip: $" + roundedTip + "" + "\n" +
+                       "Total Bill with tip: $" + roundedBillWithTip + "" + "\n" +
+                       "Per person cost before tip: $" + roundedBeforeTip + "" + "\n" +
+                       "Tip per person: $" + roundedTipPerPerson + "" + "\n" +
+                       "Total cost per person: $" + roundedTotalPerPerson + "" + "\n" +
                        "-------------------------------\n";
 
         return result;
