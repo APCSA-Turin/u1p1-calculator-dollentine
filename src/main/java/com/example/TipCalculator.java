@@ -36,7 +36,7 @@ public class TipCalculator {
         boolean condition = true;
     
         //  COPY AND PASTE YOUR PROGRAM FROM calculateTip() HERE 
-        System.out.println  ("Test"); 
+
         // the while loop condition is checked,
         // and if TRUE, runs the code inside.
         // when the code inside is done running, the condition is rechecked,
@@ -62,7 +62,7 @@ public class TipCalculator {
         double cost=10.5;              
         //System.out.println(calculateTip(people,percent,cost));
         System.out.println(extraCredit(people, percent, cost));
-        System.out.println(calculateTip(6, 25, 52.27));
+        System.out.println(calculateTip(2, 18, 5.99));
+        System.out.println(calculateTip(12, 15, 566.97));
     }
 }
-        
